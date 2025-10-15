@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Neon Cyberpunk Design System */
+
+@layer base {
+  :root {
+    --background: 220 20% 5%;
+    --foreground: 180 100% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 180 100% 95%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 180 100% 95%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 20% 5%;
+
+    --secondary: 300 100% 50%;
+    --secondary-foreground: 220 20% 5%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 180 50% 70%;
+
+    --accent: 270 100% 65%;
+    --accent-foreground: 220 20% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 180 100% 30%;
+    --input: 220 20% 15%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Neon glow colors */
+    --neon-cyan: 180 100% 50%;
+    --neon-magenta: 300 100% 50%;
+    --neon-purple: 270 100% 65%;
+    --neon-blue: 220 100% 60%;
+    
+    /* Gradients */
+    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--neon-magenta)));
+    --gradient-cyber: linear-gradient(180deg, hsl(var(--neon-purple)), hsl(var(--neon-blue)));
+    
+    /* Shadows */
+    --shadow-cyan-glow: 0 0 20px hsl(var(--neon-cyan) / 0.5), 0 0 40px hsl(var(--neon-cyan) / 0.3);
+    --shadow-magenta-glow: 0 0 20px hsl(var(--neon-magenta) / 0.5), 0 0 40px hsl(var(--neon-magenta) / 0.3);
+    --shadow-purple-glow: 0 0 20px hsl(var(--neon-purple) / 0.5), 0 0 40px hsl(var(--neon-purple) / 0.3);
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 180 100% 95%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 220 20% 5%;
+    --sidebar-accent: 220 20% 15%;
+    --sidebar-accent-foreground: 180 100% 95%;
+    --sidebar-border: 180 100% 30%;
+    --sidebar-ring: 180 100% 50%;
+  }
+
+  .dark {
+    --background: 220 20% 5%;
+    --foreground: 180 100% 95%;
+    --card: 220 20% 8%;
+    --card-foreground: 180 100% 95%;
+    --popover: 220 20% 8%;
+    --popover-foreground: 180 100% 95%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 20% 5%;
+    --secondary: 300 100% 50%;
+    --secondary-foreground: 220 20% 5%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 180 50% 70%;
+    --accent: 270 100% 65%;
+    --accent-foreground: 220 20% 5%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 180 100% 30%;
+    --input: 220 20% 15%;
+    --ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .neon-border {
+    border: 1px solid hsl(var(--primary));
+    box-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+  }
+  
+  .neon-glow-cyan {
+    box-shadow: var(--shadow-cyan-glow);
+  }
+  
+  .neon-glow-magenta {
+    box-shadow: var(--shadow-magenta-glow);
+  }
+  
+  .neon-glow-purple {
+    box-shadow: var(--shadow-purple-glow);
+  }
+  
+  .gradient-neon {
+    background: var(--gradient-neon);
+  }
+  
+  .gradient-cyber {
+    background: var(--gradient-cyber);
+  }
+}

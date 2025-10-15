@@ -1,0 +1,4 @@
+project_id = "vfatedsvcgroolteefri"
+
+[functions.generate-neon-image]
+verify_jwt = false
